@@ -166,6 +166,7 @@ html, body {
 .hero {
     width: 100%;
     margin-top: 80px;
+    margin-bottom: 160px;
     text-align: center;
   }
 
@@ -249,7 +250,7 @@ html, body {
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: rgba(255,255,255,0.5);
-    margin-bottom: 100px;
+    margin-bottom: 80px;
     text-align: center;
   }
   
@@ -260,6 +261,22 @@ html, body {
     gap: 100px;
   }
   
+  /* PHONE ONLY FIX */
+@media (max-width: 600px) {
+
+  .work-grid {
+    grid-template-columns: 1fr; /* one below each */
+    gap: 90px; /* vertical space between images */
+    justify-items: center;
+  }
+
+  .work-item {
+    max-width: 280px; /* makes images smaller on phone */
+    width: 100%;
+  }
+
+}
+
   /* FRAME — forces equal size */
   .work-item {
     width: 100%;
@@ -283,6 +300,7 @@ html, body {
     transform: scale(1.03);
     opacity: 0.9;
   }
+
   
   
   /* LIGHTBOX */
@@ -513,8 +531,12 @@ body {
  }
   
   
-/*test last*/
+/*test last*/  
   
   
   
-
+  @media (max-width: 768px) {
+  .work-preview {
+    margin: 48px auto;
+  }
+}
