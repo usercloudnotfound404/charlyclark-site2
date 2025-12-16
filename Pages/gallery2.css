@@ -459,6 +459,12 @@ html, body {
       gap: 48px;
     }
   }
+
+  @media (max-width: 768px) {
+    .frame {
+      margin-bottom: 32px;
+    }
+  }
   
   html {
     scroll-behavior: smooth;
