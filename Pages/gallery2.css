@@ -435,7 +435,7 @@ html, body {
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 40px 40px;
+  gap: 40px 140px;
   justify-content: center;
 }
 
