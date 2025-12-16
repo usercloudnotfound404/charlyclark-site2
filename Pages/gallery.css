@@ -1,0 +1,459 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+/* ================================
+   ROOT VARIABLES (DESIGN DNA)
+   ================================ */
+
+   :root {
+    --bg: #0A0A0A;
+    --fg: #EAEAEA;
+    --muted: rgba(234, 234, 234, 0.5);
+    --border: #1A1A1A;
+  
+    --max-width: 1200px;
+    --content-padding: 6%;
+  }
+  
+  /* ================================
+     GLOBAL RESET
+     ================================ */
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* ================================
+     WRAPPER (RESPONSIVE WIDTH)
+     ================================ */
+  
+     .wrap {
+        min-height: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 48px 64px;
+        display: flex;
+        flex-direction: column;
+      }
+
+  
+     .brand {
+        font-family: Inter, system-ui, sans-serif;
+        font-weight: 300;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        font-size: 22px;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .subtitle {
+        font-family: Inter, system-ui, sans-serif;
+        font-weight: 200;
+        font-size: 13px;
+        letter-spacing: 0.475em;
+        color: rgba(234,234,234,0.6);
+        margin-top: 2.5px;
+        margin-left: auto;
+        padding: 0;
+      }
+
+  .small {
+    font-size: 12px;
+    color: var(--muted);
+  }
+  
+  /* ================================
+     NAVIGATION (QUIET)
+     ================================ */
+  
+     .nav a {
+        font-size: 12px;
+        color: rgba(234,234,234,0.5);
+        text-decoration: none;
+        margin-left: 24px;
+      }
+      
+      .nav a:hover {
+        color: rgba(234,234,234,0.9);
+      }
+      
+  
+  .nav a.active {
+    color: var(--fg);
+  }
+  
+  /* ================================
+     GALLERY FRAMES (IMAGE SAFE)
+     ================================ */
+  
+  .frame {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #0a0a0a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .frame img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+  }
+
+  /* Text below each image */
+.frame-text {
+    margin-top: 12px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    opacity: 0.7;
+    text-align: center;
+  }
+  
+  
+  /* ================================
+     MOBILE ADJUSTMENTS
+     ================================ */
+  
+  @media (max-width: 768px) {
+    .wrap {
+      padding: 40px var(--content-padding);
+    }
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+  }
+  
+
+  header > div {
+    align-items: center;
+  }
+
+
+/*Hero*/
+
+.hero {
+    width: 100%;
+    margin-top: 25px;
+    text-align: center;
+  }
+
+  .hero-inner {
+    max-width: 680px;
+    margin: 0 auto 80px;
+    text-align: center;
+  }
+  
+  
+  .hero-inner h1 {
+    font-size: 44px;
+    line-height: 1.1;
+    font-weight: 250;
+    letter-spacing: 0.175em;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-inner p {
+    font-size: 15px;
+    margin-top: 10px;
+    color: rgba(234,234,234,0.75);
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  body {
+    background: radial-gradient(
+      circle at top,
+      #141414 0%,
+      #000000 22%
+    );
+  }
+
+  /* Remove underline from nav links */
+.nav a {
+    text-decoration: none;
+    border-bottom: none;
+  }
+  
+  /* Remove underline on hover */
+  .nav a:hover {
+    text-decoration: none;
+  }
+  
+  /* Remove focus outline / underline when clicked or selected */
+  .nav a:focus,
+  .nav a:active {
+    outline: none;
+    text-decoration: none;
+  }
+  
+  /* Safari selection underline fix */
+  ::selection {
+    text-decoration: none;
+  }
+
+  /* Page transition */
+  body {
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  body.loaded {
+    opacity: 1;
+  }
+  
+  body.fade-out {
+    opacity: 0;
+  }
+  
+/*Footer*/
+.footer {
+    margin-top: 100px;
+    padding-top: 40px;
+    padding-bottom: 0px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+  
+  /*Footer*/
+  .footer-inner {
+    text-align: center;
+  }
+  
+  .footer-title {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 24px;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 24px;
+  }
+  
+  .footer-links a {
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    color: #ffffff;
+  }
+  
+  .footer-copy {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+  }
+  
+  footer {
+    margin-top: calc(100vh - 100% - 40px);
+  }
+  
+  /*Base header*/
+  .header {
+    position: relative;
+    z-index: 100;
+  }
+  
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+/*Desktop Nav*/
+  .desktop-nav {
+    display: flex;
+    gap: 32px;
+  }
+  
+  .desktop-nav a {
+    text-decoration: none;
+    color: var(--fg);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+  }
+  
+  /*Hamburger (clean & smaller)*/
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+  
+  .menu-toggle span {
+    width: 18px;
+    height: 2px;
+    background: var(--fg);
+    display: block;
+    margin: 4px 0;
+  }
+
+  /*Mobile Behaviour*/
+  @media (max-width: 768px) {
+    .desktop-nav {
+      display: none;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  }
+  
+  /* Make links IDENTICAL to desktop nav */
+  .mobile-nav a {
+    all: unset;
+    cursor: pointer;
+  
+    font: inherit;
+    color: inherit;
+    letter-spacing: inherit;
+  }
+
+/* Slide-in mobile menu (RIGHT SIDE PANEL) */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 40vw;          /* right half of screen */
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+
+  background: rgba(10, 10, 10, 0.876);
+  border-left: 1px solid rgba(255,255,255,0.15);
+
+  transform: translateX(100%);
+  transition: transform 0.5s ease;
+
+  z-index: 1000;
+}
+
+/* OPEN STATE */
+.mobile-nav.open {
+  transform: translateX(0);
+}
+
+/* Links — EXACT same look as desktop nav */
+.mobile-nav a {
+  all: unset;
+  cursor: pointer;
+
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+}
+  
+/* Close (X) button */
+.menu-close {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 22px;
+    cursor: pointer;
+  
+    z-index: 1001;       /* 👈 IMPORTANT */
+    pointer-events: auto; /* 👈 IMPORTANT */
+  }
+  
+  /* Hide desktop nav links on mobile */
+  @media (max-width: 768px) {
+    header .nav:not(.mobile-nav) a {
+      display: none;
+    }
+  }
+  
+/* Backdrop behind hamburger menu */
+.menu-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(6px);
+  
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  
+    z-index: 998;
+  }
+  
+ /*Gallery Grid IG*/
+ .gallery {
+    padding: 30px 0;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+  }
+  
+  /* Tablet */
+  @media (max-width: 1024px) {
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  html {
+    scroll-behavior: smooth;
+ }
+
+ body {
+    scroll-behavior: smooth;
+ }
+
+ #contact {
+    scroll-margin-top: 120px;
+ }
+  

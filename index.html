@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Charly Clark — Visual Designer</title>
+
+  <!-- Fonts + Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header>
+      <div>
+        <div class="brand">CHARLY CLARK</div>
+        <div class="subtitle">Visual &amp; Graphic Designer</div>
+      </div>
+      
+      <nav class="nav">
+        <a href="./index.html" class="active">Home</a>
+        <a href="./Pages/gallery.html">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <!--Hamburger-->
+      <button class="menu-toggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Mobile / overlay menu -->
+  <nav class="nav mobile-nav">
+    <button class="menu-close" aria-label="close menu">x</button>
+    <a href="./index.html">Home</a>
+    <a href="./Pages/gallery.html">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+    </header>
+    
+
+    <!-- Grid -->
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>&ldquo;Visuals with intent&rdquo;</h1>
+        <p>
+          I design flyers, 3D cover art, and visual systems
+          for artists, events, and brands.
+        </p>
+      </div>
+    
+      <div class="hero-image">
+        <img src="Hero/BANNER WITH DATE.png" alt="Featured Artwork">
+      </div>
+    </section>
+
+    <!-- Selected Work -->
+
+    <section class="work-preview">
+      <h3>Selected Work</h3>
+
+      <div class="work-grid">
+        <div class="work-item">
+          <img src="Works/Juggling.png" alt="">
+        </div>
+        <div class="work-item">
+          <img src="Works/ITW PRINT.png" alt="">
+        </div>
+        <div class="work-item">
+          <img src="Works/Psychedelic Love.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+     <div class="=lightbox" id="lightbox">
+       <img src="" alt="">
+     </div>
+    
+     <footer class="footer" id="contact">
+      <div class="footer-inner">
+        <p class="footer-title">Get in touch</p>
+    
+        <div class="footer-links">
+          <a href="mailto:charlyzion9@gmail.com">Email</a>
+          <a href="https://instagram.com/divinolgy" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/profile.php?id=100077569219414" target="_blank">Facebook</a>
+        </div>
+    
+        <p class="footer-copy">
+          © 2025 Charly Clark — Visual Designer & Creative Writer
+        </p>
+      </div>
+    </footer>
+    
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" id="lightboxClose">&times;</span>
+    <img id="lightboxImg" src="" alt="preview">
+  </div>
+
+
+  <script>
+    function forceLoaded() {
+      document.body.classList.remove("loaded");
+      void document.body.offsetHeight; // force Safari repaint
+      document.body.classList.add("loaded");
+    }
+  
+    window.addEventListener("load", forceLoaded);
+  
+    window.addEventListener("pageshow", (e) => {
+      if (e.persisted) {
+        forceLoaded();
+      }
+    });
+  
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) {
+        forceLoaded();
+      }
+    });
+  </script>
+  
+  
+  <script src="./menu.js"></script>
+
+  <script>
+    const contactLink = document.querySelector('a[href="#contact"]');
+    const contactSection = document.getElementById("contact");
+  
+    if (contactLink && contactSection) {
+      contactLink.addEventListener("click", (e) => {
+        e.preventDefault();
+  
+        contactSection.scrollIntoView({ behavior: "smooth" });
+  
+        // remove #contact from URL after scroll
+        setTimeout(() => {
+          history.replaceState(null, "", window.location.pathname);
+        }, 600);
+      });
+    }
+  </script>
+  
+
+</body>
+</html>

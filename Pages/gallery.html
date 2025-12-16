@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Charly Clark — Visual Designer</title>
+
+  <!-- Fonts + Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./gallery.css">
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header>
+      <div>
+        <div class="brand">CHARLY CLARK</div>
+        <div class="subtitle">Visual &amp; Graphic Designer</div>
+      </div>
+      
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="./gallery.html" class="active">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <!--Hamburger-->
+      <button class="menu-toggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Mobile / overlay menu -->
+  <nav class="nav mobile-nav">
+    <button class="menu-close" aria-label="close menu">x</button>
+    <a href="../index.html">Home</a>
+    <a href="./gallery.html">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+    </header>
+
+    <!-- Grid -->
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>&ldquo;Archive&rdquo;</h1>
+        <p>A selection of visual work.</p>
+      </div>
+    </section>
+
+  <!-- GALLERY -->
+  <main class="gallery">
+    <div class="gallery-grid">
+  
+      <div class="frame">
+        <img src="./Img/psychedelic-1.webp" alt="ITW Print">
+        <p class="frame-text">Adaptt - 2025</p>
+      </div>
+  
+      <div class="frame">
+        <img src="./Img/untitled.webp" alt="Juggling Artwork">
+        <p class="frame-text">WubBall - 2025</p>
+      </div>
+  
+      <div class="frame">
+        <img src="./Img/Output.webp" alt="Psychedelic Love">
+        <p class="frame-text">Splayground - 2025</p>
+      </div>
+
+      <div class="frame">
+        <img src="./Img/ITW PRINT.webp" alt="ITW Print">
+        <p class="frame-text">ITW - 2025</p>
+      </div>
+  
+      <div class="frame">
+        <img src="./Img/STICK ROTATION.webp" alt="Juggling Artwork">
+        <p class="frame-text">Workshop - 2025</p>
+      </div>
+  
+      <div class="frame">
+        <img src="./Img/Dubtales cover Raw.webp" alt="Psychedelic Love">
+        <p class="frame-text">SpyderDub - 2025</p>
+      </div>
+  
+    </div>
+  </main>
+  
+
+  <footer class="footer" id="contact">
+    <div class="footer-inner">
+      <p class="footer-title">Get in touch</p>
+  
+      <div class="footer-links">
+        <a href="mailto:charlyzion9@gmail.com">Email</a>
+        <a href="https://instagram.com/divinolgy" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=100077569219414" target="_blank">Facebook</a>
+      </div>
+  
+      <p class="footer-copy">
+        © 2025 Charly Clark — Visual Designer & Creative Writer
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    function forceLoaded() {
+      document.body.classList.remove("loaded");
+      void document.body.offsetHeight; // force Safari repaint
+      document.body.classList.add("loaded");
+    }
+  
+    window.addEventListener("load", forceLoaded);
+  
+    window.addEventListener("pageshow", (e) => {
+      if (e.persisted) {
+        forceLoaded();
+      }
+    });
+  
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) {
+        forceLoaded();
+      }
+    });
+  </script>
+  
+
+<script src="./menu.js"></script>
+
+<script>
+    const contactLink = document.querySelector('a[href="#contact"]');
+    const contactSection = document.getElementById("contact");
+  
+    if (contactLink && contactSection) {
+      contactLink.addEventListener("click", (e) => {
+        e.preventDefault();
+  
+        contactSection.scrollIntoView({ behavior: "smooth" });
+  
+        // remove #contact from URL after scroll
+        setTimeout(() => {
+          history.replaceState(null, "", window.location.pathname);
+        }, 600);
+      });
+    }
+  </script>
+  
+  
+</body>
+</html>
