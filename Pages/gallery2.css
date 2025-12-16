@@ -434,9 +434,8 @@ html, body {
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 80px;
-  width: 100%;
-  margin: 0 auto;
+  gap: 80px 80px;
+  justify-content: center;
 }
 
   
