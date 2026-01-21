@@ -110,10 +110,11 @@ html, body {
   .frame {
     width: 100%;
     aspect-ratio: 1 / 1;
-    background: #0a0a0a;
+    background: #0d0d0d;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
   }
   
   .frame img {
@@ -127,6 +128,16 @@ html, body {
   /* Text below each image */
 .frame-text {
     margin-top: 12px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    opacity: 0.7;
+    text-align: center;
+  }
+
+  .frame-price{
+    margin-top: 12px;
+    margin-bottom: 0px;
     font-size: 12px;
     letter-spacing: 0.08em;
     opacity: 0.7;
@@ -134,6 +145,30 @@ html, body {
   }
 
   
+
+  .frame-buy {
+    margin-top: 14px;
+  margin-bottom: 18px;
+  position: relative;
+  padding: 6px 32px;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+
+  background: rgba(255, 255, 255, 0.029);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 4px;
+
+  color: rgba(255, 255, 255, 0.799);
+  text-decoration: none;
+
+  backdrop-filter: blur(6px);
+}
+
+.frame-buy:hover {
+  background: #303030;
+}
+
+
   
   /* ================================
      MOBILE ADJUSTMENTS
@@ -239,7 +274,7 @@ html, body {
   
 /*Footer*/
 .footer {
-    margin-top: 48px;
+    margin-top: 50px;
     padding-top: 40px;
     padding-bottom: 0px;
     border-top: 1px solid rgba(255,255,255,0.05);
@@ -518,3 +553,7 @@ html, body {
  .frame-text {
   margin-top: 16px;
  }
+
+ 
+
+
