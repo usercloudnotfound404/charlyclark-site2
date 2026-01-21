@@ -123,6 +123,9 @@ html, body {
     object-fit: contain;
     display: block;
     margin: auto;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
   }
 
   /* Text below each image */

@@ -201,6 +201,9 @@ html, body {
     height: 100%;
     object-fit: auto;
     display: block;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
   }
 
 
@@ -294,6 +297,9 @@ html, body {
     display: block;
     transition: transform 0.3s ease, opacity 0.3s ease;
     cursor: pointer;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
   }
   
   .work-item:hover img {
