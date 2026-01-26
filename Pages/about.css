@@ -447,7 +447,7 @@ html, body {
 @media (max-width: 600px) {
     .about-content p {
         margin-bottom: 12px;
-        margin-top: 64;
+        margin-top: 32;
     }
 }
 
