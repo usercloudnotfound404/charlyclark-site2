@@ -277,7 +277,7 @@ html, body {
   
 /*Footer*/
 .footer {
-    margin-top: 50px;
+    margin-top: 32px;
     padding-top: 40px;
     padding-bottom: 0px;
     border-top: 1px solid rgba(255,255,255,0.05);
@@ -421,7 +421,12 @@ html, body {
   font: inherit;
   color: inherit;
   letter-spacing: inherit;
+  opacity: 75%;
 }
+
+.mobile-nav a:hover {
+        opacity: 100%;;
+      }
   
 /* Close (X) button */
 .menu-close {
@@ -434,9 +439,14 @@ html, body {
     color: inherit;
     font-size: 22px;
     cursor: pointer;
+    opacity: 75%;
   
     z-index: 1001;       /* 👈 IMPORTANT */
     pointer-events: auto; /* 👈 IMPORTANT */
+  }
+
+  .menu-close:hover {
+    opacity: 100%;
   }
   
   /* Hide desktop nav links on mobile */
