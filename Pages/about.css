@@ -210,7 +210,7 @@ html, body {
   
 /*Footer*/
 .footer {
-    margin-top: 48px;
+    margin-top: 96px;
     padding-top: 40px;
     padding-bottom: 0px;
     border-top: 1px solid rgba(255,255,255,0.05);
@@ -257,7 +257,7 @@ html, body {
 
   @media (max-width: 600px) {
     .footer {
-        margin-top: 135px;
+        margin-top: 48px;
     }
 }
   
@@ -428,7 +428,7 @@ html, body {
 
  .about-content {
   max-width: 640px;
-  margin: 36px auto;
+  margin: 100px auto;
   padding: 0 20px;
 }
 
@@ -446,7 +446,7 @@ html, body {
 
 @media (max-width: 600px) {
     .about-content p {
-        margin-bottom: 24px;
+        margin-bottom: 12px;
     }
 }
 
